@@ -77,6 +77,7 @@ const Projects = () => {
                                     width: { xs: '100%', md: 300 },
                                     height: { xs: 200, md: '100%' },
                                     objectFit: 'cover',
+                                    marginTop: '50px',
                                 }}
                             />
 
@@ -141,7 +142,7 @@ const Projects = () => {
                                             href={project.genAIProductivity}
                                             target="_blank"
                                         >
-                                            genAIProductivity
+                                            GenAI Productivity
                                         </Button>
                                     )}
                                     <Button

@@ -1,4 +1,3 @@
-// components/About.jsx
 import React from 'react';
 import {
     Typography,
@@ -9,9 +8,21 @@ import {
     Grid,
     Avatar,
     Paper,
+    Link,
 } from '@mui/material';
 
 const About = () => {
+    const experienceItems = [
+        'Joined Bosch in August 2023.',
+        'Worked at Rexroth as a Frontend Developer on the ONEX project.',
+        'Task Force Member of the GenAI initiative.',
+        'Actively leveraging GitHub Copilot in project development.',
+        'Joined the GenAI team in May 2024.',
+        'Delivered a live demo to the EAL team showcasing GenAI advantages.',
+        'Currently working in the SRS team as a React Developer since Jan 2025.',
+        'Improving unit test coverage and resolving Sonar issues with GenAI.',
+    ];
+
     return (
         <Box
             id="about"
@@ -61,25 +72,37 @@ const About = () => {
                             About Me
                         </Typography>
                         <List>
-                            {[
-                                'Joined Bosch in August 2023.',
-                                'Worked at Rexroth as a Frontend Developer on the ONEX project.',
-                                'Task Force Member of the GenAI initiative.',
-                                'Actively leveraging GitHub Copilot in project development.',
-                                'Joined the GenAI team in May 2024.',
-                                'Delivered a live demo to the EAL team showcasing GenAI advantages.',
-                                'Currently working in the SRS team as a React Developer since Jan 2025.',
-                                'Improving unit test coverage and resolving Sonar issues with GenAI.',
-                            ].map((item, idx) => (
+                            {experienceItems.map((item, idx) => (
                                 <ListItem key={idx} disablePadding>
                                     <ListItemText
                                         primary={
-                                            <Typography
-                                                variant="body1"
-                                                fontWeight={500}
-                                            >
-                                                {item}
-                                            </Typography>
+                                            item.includes('live demo') ? (
+                                                <Typography
+                                                    variant="body1"
+                                                    fontWeight={500}
+                                                >
+                                                    Delivered a{' '}
+                                                    <Link
+                                                        href="https://sathwik22-github-io.vercel.app/intro.html"
+                                                        target="_blank"
+                                                        rel="noopener"
+                                                        underline="hover"
+                                                        color="primary"
+                                                        fontWeight={600}
+                                                    >
+                                                        live demo
+                                                    </Link>{' '}
+                                                    to the EAL team showcasing
+                                                    GenAI advantages.
+                                                </Typography>
+                                            ) : (
+                                                <Typography
+                                                    variant="body1"
+                                                    fontWeight={500}
+                                                >
+                                                    {item}
+                                                </Typography>
+                                            )
                                         }
                                     />
                                 </ListItem>
