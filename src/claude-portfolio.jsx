@@ -810,7 +810,7 @@ function Portfolio() {
                                                 Feedback
                                             </Button>
                                         )}
-                                        {project.genAIProductivity && (
+                                        {/* {project.genAIProductivity && (
                                             <Button
                                                 size="small"
                                                 color="secondary"
@@ -824,7 +824,7 @@ function Portfolio() {
                                             >
                                                 GenAI Impact
                                             </Button>
-                                        )}
+                                        )} */}
                                     </CardActions>
                                 </Card>
                             </Grid>
