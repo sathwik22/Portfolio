@@ -36,6 +36,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import LinkIcon from '@mui/icons-material/Link';
 import PreviewIcon from '@mui/icons-material/Preview';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
+import profilePhoto from './profilephoto.jpg';
 
 function Portfolio() {
     const [darkMode, setDarkMode] = useState(true);
@@ -400,26 +401,46 @@ function Portfolio() {
                     </Box>
 
                     <Grid container spacing={6} alignItems="center">
-                        <Grid item xs={12} md={5}>
-                            <Paper
-                                elevation={darkMode ? 6 : 1}
+                        <Grid item xs={12} md={5} margin={'auto'}>
+                            <Box
                                 sx={{
-                                    borderRadius: 4,
-                                    overflow: 'hidden',
-                                    border: `1px solid ${
-                                        darkMode
-                                            ? 'rgba(255,255,255,0.05)'
-                                            : 'rgba(0,0,0,0.05)'
-                                    }`,
-                                    transform: 'rotate(0deg)',
+                                    display: 'flex',
+                                    justifyContent: 'center',
                                 }}
                             >
-                                <img
-                                    src={require('./profilephoto.jpg')}
-                                    alt="Profile"
-                                    style={{ width: '30%', display: 'block' }}
-                                />
-                            </Paper>
+                                <Paper
+                                    elevation={darkMode ? 6 : 1}
+                                    sx={{
+                                        borderRadius: '50%',
+                                        overflow: 'hidden',
+                                        border: `1px solid ${
+                                            darkMode
+                                                ? 'rgba(255,255,255,0.05)'
+                                                : 'rgba(0,0,0,0.05)'
+                                        }`,
+                                        width: 180,
+                                        height: 180,
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+
+                                        background: darkMode
+                                            ? 'rgba(255,255,255,0.05)'
+                                            : 'rgba(0,0,0,0.05)',
+                                    }}
+                                >
+                                    <img
+                                        src={profilePhoto}
+                                        alt="Profile"
+                                        style={{
+                                            width: '90%',
+                                            height: '90%',
+                                            objectFit: 'cover',
+                                            borderRadius: '50%',
+                                        }}
+                                    />
+                                </Paper>
+                            </Box>
                         </Grid>
                         <Grid item xs={12} md={7}>
                             <Typography
