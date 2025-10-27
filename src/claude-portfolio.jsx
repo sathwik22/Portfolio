@@ -12,13 +12,11 @@ import {
     Divider,
     Grid,
     IconButton,
-    Link,
     List,
     ListItem,
     ListItemIcon,
     ListItemText,
     Paper,
-    TextField,
     ThemeProvider,
     Toolbar,
     Typography,
@@ -95,16 +93,35 @@ function Portfolio() {
         'Actively leveraging GitHub Copilot in project development.',
         'Joined the GenAI team in May 2024.',
         'Delivered a live demo to the EAL team showcasing GenAI advantages.',
-        'Currently working in the SRS team as a React Developer since Jan 2025.',
-        'Improving unit test coverage and resolving Sonar issues with GenAI.',
+        'Led frontend for a multi-brand automotive e-commerce platform using React, TypeScript, and Redux; built high-performance search for large datasets.',
+        'Drove adoption of Behavior Driven Development (BDD) with Gherkin feature files, reducing post-release defects by 35%.',
+        'Developed admin panels with React-Admin, cutting administrative effort by 30%.',
+        'Built comprehensive unit and E2E test suites with Jest and React Testing Library.',
+        'Enhanced SEO for React apps with dynamic meta tags and prioritized sitemaps.',
+        'Led vulnerability management, reducing critical/high security issues to zero.',
+        'Conducted GitHub Copilot sessions, demonstrating AI-assisted coding best practices.',
+        'Mentored interns on frontend best practices and interactive map features.',
+        'Contributed to AI-driven initiatives, including a virtual assistant prototype.',
     ];
 
     const skills = [
-        { name: 'React', level: 95 },
+        // Languages
         { name: 'JavaScript', level: 90 },
+        { name: 'TypeScript', level: 85 },
+        { name: 'Python', level: 75 },
+        { name: 'SQL', level: 70 },
+        { name: 'LaTeX', level: 60 },
+        // Frameworks & Libraries
+        { name: 'React', level: 95 },
         { name: 'Material-UI', level: 85 },
-        { name: 'Unit Testing (Jest)', level: 80 },
-        { name: 'GenAI Integration', level: 85 },
+        { name: 'Sass', level: 75 },
+        { name: 'HTML', level: 90 },
+        { name: 'CSS', level: 85 },
+        // Tools
+        { name: 'GitHub Copilot', level: 90 },
+        { name: 'Postman', level: 80 },
+        { name: 'Linux', level: 80 },
+        { name: 'Solid Edge', level: 60 },
     ];
 
     // Create a theme instance with dark/light mode
@@ -175,35 +192,6 @@ function Portfolio() {
         setFormData({
             ...formData,
             [name]: value,
-        });
-    };
-
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
-        // Validate form
-        if (!formData.name || !formData.email || !formData.message) {
-            setSnackbar({
-                open: true,
-                message: 'Please fill all required fields',
-                severity: 'error',
-            });
-            return;
-        }
-
-        // Simulate form submission
-        console.log('Form Data:', formData);
-        setSnackbar({
-            open: true,
-            message: 'Message sent successfully!',
-            severity: 'success',
-        });
-
-        // Reset form
-        setFormData({
-            name: '',
-            email: '',
-            subject: '',
-            message: '',
         });
     };
 
