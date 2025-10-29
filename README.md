@@ -63,5 +63,3 @@ src/
 -   [GitHub](https://github.com/sathwik22)
 
 ---
-
-> Built with ❤️ by Veeramalli Sathwik
