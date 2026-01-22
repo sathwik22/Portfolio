@@ -169,7 +169,7 @@ export const projectData = [
         demo: 'https://hackathon-semantic.vercel.app/',
         github: 'https://github.com/sathwik22/hackathon-semantic',
         highlights: [
-            '🏆 2025 Security Innovation Hackathon',
+            '2025 Security Innovation Hackathon',
             'Unified multi-scanner interface',
             'Smart vulnerability prioritization',
             'DevSecOps workflow optimization',
