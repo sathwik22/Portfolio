@@ -119,8 +119,8 @@ export const projectData = [
         ],
         image: '/ai-assistant.PNG',
         feedback: '',
-        demo: 'https://github.com/sathwik22/AI_Assisted_Software_Engineering',
-        github: 'https://github.com/sathwik22/AI_Assisted_Software_Engineering',
+        demo: 'https://bosch-car-service-ai-assistant.vercel.app/',
+        github: 'https://github.com/sathwik22/Bosch-Car-Service-AI-Assistant',
     },
     {
         title: 'Department Fund Management System',
