@@ -1,11 +1,3 @@
-import React from 'react';
-import { CssBaseline, Box } from '@mui/material';
-import Contact from './components/contact';
-import About from './components/about';
-import Projects from './components/projects';
-import Home from './components/home';
-import Sidebar from './components/SideBar';
-import { ActiveSectionProvider } from './components/activesection';
 import Portfolio from './claude-portfolio';
 const App = () => {
     return (
