@@ -20,7 +20,7 @@ export const personalInfo = {
 
 export const heroLines = [
     "Hi, I'm Sathwik Veeramalli.",
-    'Software Engineer @ Bosch.',
+    'Software Engineer at Bosch.',
     'React & TypeScript Expert.',
     'Building for 100k+ Users.',
     'AI-Powered Development.',
