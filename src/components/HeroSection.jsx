@@ -141,7 +141,7 @@ const HeroSection = ({ currentLine, darkMode, scrollToSection, theme }) => {
                                     : 'rgba(0, 0, 0, 0.7)',
                             }}
                         >
-                            Full Stack Developer & GenAI Enthusiast
+                            Frontend Developer & GenAI Enthusiast
                         </Typography>
 
                         {/* Description */}
