@@ -153,4 +153,26 @@ export const projectData = [
             'Standardized testing across teams',
         ],
     },
+    {
+        title: 'Security Vulnerability Report Viewer',
+        description:
+            'Award-winning security vulnerability management dashboard developed during the 2025 Security Innovation Hackathon. Provides unified interface for analyzing outputs from Trivy, Grype, and other security scanners. Features smart filtering, severity-based prioritization, and mobile-responsive design. Addresses real-world DevSecOps challenges by centralizing vulnerability tracking and streamlining remediation workflows for enterprise development teams.',
+        technologies: [
+            'React',
+            'Material-UI',
+            'DevSecOps',
+            'Security Tools',
+            'Data Visualization',
+        ],
+        image: '/vulnerability-viewer.PNG',
+        feedback: '',
+        demo: 'https://hackathon-semantic.vercel.app/',
+        github: 'https://github.com/sathwik22/hackathon-semantic',
+        highlights: [
+            '🏆 2025 Security Innovation Hackathon',
+            'Unified multi-scanner interface',
+            'Smart vulnerability prioritization',
+            'DevSecOps workflow optimization',
+        ],
+    },
 ];
