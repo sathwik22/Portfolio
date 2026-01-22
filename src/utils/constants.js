@@ -1,84 +1,156 @@
 // Static data for the portfolio
 
 export const personalInfo = {
-    name: 'Veeramalli Sathwik',
+    name: 'Sathwik Veeramalli',
     email: 'veeramallisathwik@gmail.com',
-    title: 'Full Stack Developer & GenAI Enthusiast',
+    phone: '+91 9676214660',
+    title: 'Software Engineer Frontend | React & TypeScript Specialist',
+    tagline:
+        'Frontend engineer with nearly 3 years building enterprise React apps at Bosch',
     college: 'Indian Institute of Technology, Hyderabad',
+    degree: 'B.Tech in Computer Science and Engineering',
+    cgpa: '8.17/10.0',
+    graduationYear: '2023',
     experienceSince: 'August 2023',
-    linkedin: 'https://www.linkedin.com/in/sathwik-veeramalli',
+    location: 'Bangalore, India',
+    linkedin: 'https://www.linkedin.com/in/veeramalli-sathwik-43951423b',
     github: 'https://github.com/sathwik22',
     resumePath: '/Veeramalli_Sathwik_Resume.pdf',
 };
 
 export const heroLines = [
-    "Hi, I'm Veeramalli Sathwik.",
-    'Frontend Developer.',
-    'React Enthusiast.',
-    'Exploring GenAI in Development.',
+    "Hi, I'm Sathwik Veeramalli.",
+    'Software Engineer @ Bosch.',
+    'React & TypeScript Expert.',
+    'Building for 100k+ Users.',
+    'AI-Powered Development.',
 ];
 
-export const aboutDescription = `I'm a passionate Frontend Developer specializing in React and modern JavaScript frameworks, with a strong focus on integrating Generative AI tools to enhance development workflows. My expertise spans application development, UI/UX design, and implementing efficient testing strategies.`;
+export const aboutDescription = `Frontend engineer with nearly 3 years building enterprise React applications at Bosch, specializing in performance optimization, scalable state management, and test automation. Selected as core member of the Generative AI Task Force, I've delivered 5 production-ready AI prototypes while leading testing standardization across teams.`;
 
 export const experienceItems = [
-    'Joined Bosch in August 2023.',
-    'Worked at Rexroth as a Frontend Developer on the ONEX project.',
-    'Task Force Member of the GenAI initiative.',
-    'Actively leveraging GitHub Copilot in project development.',
-    'Joined the GenAI team in May 2024.',
-    'Delivered a live demo to the EAL team showcasing GenAI advantages.',
-    'Led frontend for a multi-brand automotive e-commerce platform using React, TypeScript, and Redux; built high-performance search for large datasets.',
-    'Drove adoption of Behavior Driven Development (BDD) with Gherkin feature files, reducing post-release defects by 35%.',
-    'Developed admin panels with React-Admin, cutting administrative effort by 30%.',
-    'Built comprehensive unit and E2E test suites with Jest and React Testing Library.',
-    'Enhanced SEO for React apps with dynamic meta tags and prioritized sitemaps.',
-    'Led vulnerability management, reducing critical/high security issues to zero.',
-    'Conducted GitHub Copilot sessions, demonstrating AI-assisted coding best practices.',
-    'Mentored interns on frontend best practices and interactive map features.',
-    'Contributed to AI-driven initiatives, including a virtual assistant prototype.',
+    {
+        period: 'Aug 2023 - Present',
+        title: 'Software Engineer Frontend',
+        company: 'Bosch Global Software Technologies',
+        location: 'Bangalore',
+        achievements: [
+            'Led React and TypeScript development for multi-brand automotive e-commerce platform serving 100k+ users across 20+ countries (Ford, Jaguar, Toyota, Subaru, Isuzu)',
+            'Owned and standardized Jest + React Testing Library setup across all React OEs, defining test architecture, shared utilities, and CI integration',
+            'Drove AI-assisted testing adoption with GitHub Copilot, reducing test creation time by 60%',
+            'Initiated vulnerability reduction efforts, fixing critical and high-severity issues, resulting in 35% fewer security findings',
+            'Architected Redux Toolkit-based state management, reducing prop drilling and improving maintainability',
+            'Built reusable component library from Figma designs, accelerating feature delivery by 40%',
+            'Optimized performance using memoization, lazy loading, and virtualization, improving page load time by 35%',
+            'Engineered high-performance search and filter workflows handling 46,000+ records',
+            'Selected as core member of Generative AI Task Force; delivered 5 production-ready AI prototypes including multimodal chatbot solutions',
+        ],
+    },
 ];
 
 export const skills = [
-    // Languages
-    { name: 'JavaScript', level: 90 },
-    { name: 'TypeScript', level: 85 },
-    { name: 'Python', level: 75 },
-    { name: 'SQL', level: 70 },
-    { name: 'LaTeX', level: 60 },
-    // Frameworks & Libraries
+    // Frontend Core
     { name: 'React', level: 95 },
-    { name: 'Material-UI', level: 85 },
-    { name: 'Sass', level: 75 },
-    { name: 'HTML', level: 90 },
-    { name: 'CSS', level: 85 },
-    // Tools
-    { name: 'GitHub Copilot', level: 90 },
-    { name: 'Postman', level: 80 },
-    { name: 'Linux', level: 80 },
-    { name: 'Solid Edge', level: 60 },
+    { name: 'TypeScript', level: 90 },
+    { name: 'JavaScript (ES6+)', level: 95 },
+    { name: 'HTML5', level: 90 },
+    { name: 'CSS3', level: 90 },
+    { name: 'Next.js', level: 80 },
+    // State Management & Architecture
+    { name: 'Redux Toolkit', level: 90 },
+    { name: 'Context API', level: 85 },
+    { name: 'React-Admin', level: 85 },
+    { name: 'Material-UI', level: 90 },
+    // Testing & Quality
+    { name: 'Jest', level: 90 },
+    { name: 'React Testing Library', level: 90 },
+    { name: 'Cypress', level: 85 },
+    { name: 'BDD/Gherkin', level: 80 },
+    { name: 'TDD', level: 85 },
+    // Backend & Database
+    { name: 'Python', level: 80 },
+    { name: 'Django', level: 75 },
+    { name: 'FastAPI', level: 75 },
+    { name: 'SQL', level: 75 },
+    { name: 'PostgreSQL', level: 70 },
+    // DevOps & Tools
+    { name: 'Git', level: 90 },
+    { name: 'Azure DevOps', level: 85 },
+    { name: 'CI/CD', level: 80 },
+    { name: 'GitHub Copilot', level: 95 },
+    { name: 'Postman', level: 85 },
+    // Methodologies
+    { name: 'Agile/Scrum', level: 90 },
 ];
 
 export const projectData = [
     {
-        title: 'ONEX @ Rexroth',
+        title: 'Multi-Brand Automotive E-Commerce Platform',
         description:
-            '"Built a modern, responsive dashboard for Rexroth using React and MUI, enabling users to navigate key links and add any page as a custom favorite. Leveraged GenAI for code optimization and unit testing, achieving a 30% productivity boost. Collaborated with the Bosch Rexroth team to enhance user experience and accessibility.',
-        technologies: ['React-admin', 'MUI', 'Jest', 'cypress'],
-        image: '/rexroth.PNG',
-        feedback: 'https://gpd-theta.vercel.app/',
-        demo: 'https://www.boschrexroth.com/en/de/myrexroth/',
-        genAIProductivity:
-            'https://inside-docupedia.bosch.com/confluence/display/SXEDAHome/DC+Executive+Summary',
-    },
-    {
-        title: 'SRS @ React-Frontend',
-        description:
-            'Working in the SRS team as a React Developer. Developed a multi-select filter feature for Rotunda, enabling users to filter search results and items efficiently.contributing to the SRS team by resolving Sonar issues using Copilot, enhancing unit test coverage, and exploring ways to address critical security vulnerabilities using GenAI.',
-        technologies: ['React', 'Jest'],
+            'Led React and TypeScript development for an enterprise e-commerce platform serving 100k+ users across 20+ countries (Ford, Jaguar, Toyota, Subaru, Isuzu). Architected Redux Toolkit-based state management, built reusable component library from Figma, and optimized performance with lazy loading and virtualization, improving load time by 35%.',
+        technologies: [
+            'React',
+            'TypeScript',
+            'Redux Toolkit',
+            'Material-UI',
+            'Jest',
+            'Cypress',
+        ],
         image: '/ford-rotunda.PNG',
         feedback: '',
         demo: '#',
-        genAIProductivity:
-            'https://contactservicesolutions.atlassian.net/wiki/spaces/SRSCOR/pages/5171150849/OE+s+-+Unit+Testing+Initiative',
+        highlights: [
+            '100k+ users across 20+ countries',
+            '35% performance improvement',
+            '40% faster feature delivery',
+            'Handling 46,000+ records',
+        ],
+    },
+    {
+        title: 'Bosch Car Service AI Assistant',
+        description:
+            'Built an AI-powered diagnostic assistant using React and Material UI that provides personalized automotive solutions. Implemented feedback-driven learning pipeline to improve answer accuracy, collected user feedback for continuous improvement, and aggregated verified web resources to generate customized solution guides.',
+        technologies: [
+            'React',
+            'Material-UI',
+            'AI/ML',
+            'REST API',
+            'TypeScript',
+        ],
+        image: '/ai-assistant.PNG',
+        feedback: '',
+        demo: 'https://github.com/sathwik22/AI_Assisted_Software_Engineering',
+        github: 'https://github.com/sathwik22/AI_Assisted_Software_Engineering',
+    },
+    {
+        title: 'Department Fund Management System',
+        description:
+            'Full-stack application using React and Django REST Framework with PostgreSQL backend. Implemented role-based access control with multi-level approval workflow, designed real-time dashboards for fund tracking and utilization analytics, ensuring secure and efficient departmental budget management.',
+        technologies: ['React', 'Django', 'PostgreSQL', 'REST API', 'Python'],
+        image: '/ddf-management.PNG',
+        feedback: '',
+        demo: '#',
+        github: 'https://github.com/sathwik22/DDF-Management-System',
+    },
+    {
+        title: 'AI-Driven Testing & Quality Initiative',
+        description:
+            'Owned and standardized Jest + React Testing Library setup across multiple teams. Drove AI-assisted testing adoption using GitHub Copilot, reducing test creation time by 60%. Trained team members on BDD-style scenarios and effective unit testing, establishing best practices for the entire frontend organization.',
+        technologies: [
+            'Jest',
+            'React Testing Library',
+            'BDD/Gherkin',
+            'GitHub Copilot',
+            'CI/CD',
+        ],
+        image: '/testing-initiative.PNG',
+        feedback: '',
+        demo: '#',
+        highlights: [
+            '60% reduction in test creation time',
+            'Trained 15+ developers',
+            '35% fewer security findings',
+            'Standardized testing across teams',
+        ],
     },
 ];

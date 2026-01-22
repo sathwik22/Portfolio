@@ -7,27 +7,46 @@ const ProjectsSection = ({ darkMode, theme }) => {
     return (
         <Box id="projects" sx={{ py: 10, scrollMarginTop: '64px' }}>
             <Container>
-                <Box sx={{ textAlign: 'center', mb: 6 }}>
+                <Box sx={{ textAlign: 'center', mb: 8 }}>
                     <Typography
                         variant="overline"
                         sx={{
                             color: theme.palette.primary.main,
-                            fontWeight: 'bold',
+                            fontWeight: 700,
+                            fontSize: '0.95rem',
+                            letterSpacing: '0.1em',
                         }}
                     >
-                        My Work
+                        MY WORK
                     </Typography>
-                    <Typography variant="h2" sx={{ mb: 2 }}>
-                        Recent Projects
-                    </Typography>
-                    <Divider
+                    <Typography
+                        variant="h2"
                         sx={{
-                            mx: 'auto',
-                            width: '60px',
-                            height: '4px',
-                            backgroundColor: theme.palette.primary.main,
+                            mt: 1,
+                            mb: 2,
+                            fontSize: { xs: '2rem', md: '3rem' },
+                            fontWeight: 800,
+                            background: darkMode
+                                ? 'linear-gradient(135deg, #FFFFFF 0%, #8B5CF6 100%)'
+                                : 'linear-gradient(135deg, #1E293B 0%, #7C3AED 100%)',
+                            backgroundClip: 'text',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
                         }}
-                    />
+                    >
+                        Featured Projects
+                    </Typography>
+                    <Typography
+                        variant="body1"
+                        sx={{
+                            color: 'text.secondary',
+                            maxWidth: '600px',
+                            mx: 'auto',
+                        }}
+                    >
+                        Real-world applications built for enterprise scale,
+                        showcasing expertise in modern web development
+                    </Typography>
                 </Box>
 
                 <Grid container spacing={4}>

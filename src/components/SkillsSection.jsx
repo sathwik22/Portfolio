@@ -1,107 +1,223 @@
 import React from 'react';
-import {
-    Box,
-    Container,
-    Grid,
-    Typography,
-    Divider,
-    Paper,
-} from '@mui/material';
-import { skills } from '../utils/constants';
+import { Box, Container, Typography, Chip, Stack, Paper } from '@mui/material';
+import { keyframes } from '@mui/system';
+
+const fadeInUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 const SkillsSection = ({ darkMode, theme }) => {
+    const skillCategories = [
+        {
+            title: '⚡ Core Technologies',
+            skills: ['React', 'TypeScript', 'JavaScript', 'HTML', 'CSS'],
+            gradient: 'linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)',
+        },
+        {
+            title: '🎨 Frameworks & Libraries',
+            skills: ['Material-UI', 'Sass', 'React-Admin', 'Redux'],
+            gradient: 'linear-gradient(135deg, #06B6D4 0%, #3B82F6 100%)',
+        },
+        {
+            title: '🛠️ Tools & Platforms',
+            skills: ['GitHub Copilot', 'Jest', 'Cypress', 'Postman', 'Linux'],
+            gradient: 'linear-gradient(135deg, #EC4899 0%, #F59E0B 100%)',
+        },
+        {
+            title: '📚 Also Familiar With',
+            skills: ['Python', 'SQL', 'LaTeX', 'Solid Edge'],
+            gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+        },
+    ];
+
     return (
         <Box
+            id="skills"
             sx={{
-                py: 10,
-                backgroundColor: darkMode
-                    ? 'rgba(30, 30, 30, 0.6)'
-                    : 'rgba(240, 240, 240, 0.6)',
+                py: 12,
+                position: 'relative',
             }}
         >
-            <Container>
-                <Box sx={{ textAlign: 'center', mb: 6 }}>
+            <Container maxWidth="lg">
+                {/* Section Header */}
+                <Box
+                    sx={{
+                        textAlign: 'center',
+                        mb: 8,
+                        animation: `${fadeInUp} 0.8s ease-out`,
+                    }}
+                >
                     <Typography
                         variant="overline"
                         sx={{
                             color: theme.palette.primary.main,
-                            fontWeight: 'bold',
+                            fontWeight: 700,
+                            fontSize: '0.95rem',
+                            letterSpacing: '0.1em',
                         }}
                     >
-                        My Expertise
+                        TECH STACK
                     </Typography>
-                    <Typography variant="h2" sx={{ mb: 2 }}>
-                        Skills & Abilities
-                    </Typography>
-                    <Divider
+                    <Typography
+                        variant="h2"
                         sx={{
-                            mx: 'auto',
-                            width: '60px',
-                            height: '4px',
-                            backgroundColor: theme.palette.primary.main,
+                            mt: 1,
+                            mb: 2,
+                            fontSize: { xs: '2rem', md: '3rem' },
+                            fontWeight: 800,
+                            background: darkMode
+                                ? 'linear-gradient(135deg, #FFFFFF 0%, #8B5CF6 100%)'
+                                : 'linear-gradient(135deg, #1E293B 0%, #7C3AED 100%)',
+                            backgroundClip: 'text',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
                         }}
-                    />
+                    >
+                        Skills & Technologies
+                    </Typography>
+                    <Typography
+                        variant="body1"
+                        sx={{
+                            maxWidth: '600px',
+                            mx: 'auto',
+                            color: darkMode
+                                ? 'rgba(255, 255, 255, 0.6)'
+                                : 'rgba(0, 0, 0, 0.6)',
+                            fontSize: '1.1rem',
+                        }}
+                    >
+                        Technologies and tools I work with to build exceptional
+                        digital experiences
+                    </Typography>
                 </Box>
 
-                <Grid container spacing={4}>
-                    {skills.map((skill, index) => (
-                        <Grid item xs={12} sm={6} key={index}>
-                            <Paper
-                                elevation={darkMode ? 6 : 1}
-                                sx={{
-                                    p: 3,
-                                    borderRadius: 4,
-                                    background: darkMode
-                                        ? 'linear-gradient(145deg, #1e1e1e, #232323)'
-                                        : 'linear-gradient(145deg, #ffffff, #f5f5f5)',
+                {/* Skills Grid */}
+                <Stack spacing={4}>
+                    {skillCategories.map((category, categoryIndex) => (
+                        <Paper
+                            key={categoryIndex}
+                            elevation={0}
+                            sx={{
+                                p: 4,
+                                borderRadius: 4,
+                                background: darkMode
+                                    ? 'rgba(30, 41, 59, 0.5)'
+                                    : 'rgba(255, 255, 255, 0.8)',
+                                backdropFilter: 'blur(10px)',
+                                border: `1px solid ${
+                                    darkMode
+                                        ? 'rgba(139, 92, 246, 0.2)'
+                                        : 'rgba(124, 58, 237, 0.1)'
+                                }`,
+                                transition:
+                                    'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                                animation: `${fadeInUp} 0.8s ease-out ${
+                                    categoryIndex * 0.1
+                                }s both`,
+                                '&:hover': {
+                                    transform: 'translateY(-8px)',
+                                    boxShadow: darkMode
+                                        ? '0 20px 40px rgba(139, 92, 246, 0.2)'
+                                        : '0 20px 40px rgba(124, 58, 237, 0.15)',
                                     border: `1px solid ${
                                         darkMode
-                                            ? 'rgba(255,255,255,0.05)'
-                                            : 'rgba(0,0,0,0.05)'
+                                            ? 'rgba(139, 92, 246, 0.4)'
+                                            : 'rgba(124, 58, 237, 0.2)'
                                     }`,
-                                    transition: 'transform 0.3s ease',
-                                    '&:hover': {
-                                        transform: 'translateY(-5px)',
-                                    },
+                                },
+                            }}
+                        >
+                            {/* Category Title */}
+                            <Typography
+                                variant="h6"
+                                sx={{
+                                    mb: 3,
+                                    fontWeight: 700,
+                                    fontSize: '1.25rem',
+                                    background: category.gradient,
+                                    backgroundClip: 'text',
+                                    WebkitBackgroundClip: 'text',
+                                    WebkitTextFillColor: 'transparent',
                                 }}
                             >
-                                <Typography variant="h6" sx={{ mb: 1 }}>
-                                    {skill.name}
-                                </Typography>
-                                <Box
-                                    sx={{
-                                        height: '10px',
-                                        width: '100%',
-                                        backgroundColor: darkMode
-                                            ? 'rgba(255, 255, 255, 0.1)'
-                                            : 'rgba(0, 0, 0, 0.1)',
-                                        borderRadius: 5,
-                                        mb: 1,
-                                    }}
-                                >
-                                    <Box
+                                {category.title}
+                            </Typography>
+
+                            {/* Skills Chips */}
+                            <Box
+                                sx={{
+                                    display: 'flex',
+                                    flexWrap: 'wrap',
+                                    gap: 1.5,
+                                }}
+                            >
+                                {category.skills.map((skill, skillIndex) => (
+                                    <Chip
+                                        key={skillIndex}
+                                        label={skill}
                                         sx={{
-                                            height: '100%',
-                                            width: `${skill.level}%`,
-                                            backgroundColor:
-                                                theme.palette.primary.main,
-                                            borderRadius: 5,
-                                            boxShadow: darkMode
-                                                ? '0 0 10px rgba(187, 134, 252, 0.5)'
-                                                : 'none',
+                                            px: 2,
+                                            py: 2.5,
+                                            fontSize: '0.95rem',
+                                            fontWeight: 600,
+                                            background: darkMode
+                                                ? 'rgba(139, 92, 246, 0.1)'
+                                                : 'rgba(124, 58, 237, 0.08)',
+                                            color: darkMode
+                                                ? 'rgba(255, 255, 255, 0.9)'
+                                                : 'rgba(0, 0, 0, 0.8)',
+                                            border: `1px solid ${
+                                                darkMode
+                                                    ? 'rgba(139, 92, 246, 0.3)'
+                                                    : 'rgba(124, 58, 237, 0.2)'
+                                            }`,
+                                            backdropFilter: 'blur(10px)',
+                                            transition: 'all 0.3s ease',
+                                            '&:hover': {
+                                                background: category.gradient,
+                                                color: '#FFFFFF',
+                                                transform:
+                                                    'translateY(-4px) scale(1.05)',
+                                                boxShadow: darkMode
+                                                    ? '0 8px 16px rgba(139, 92, 246, 0.3)'
+                                                    : '0 8px 16px rgba(124, 58, 237, 0.25)',
+                                                border: 'none',
+                                            },
                                         }}
                                     />
-                                </Box>
-                                <Typography
-                                    variant="body2"
-                                    sx={{ textAlign: 'right' }}
-                                >
-                                    {skill.level}%
-                                </Typography>
-                            </Paper>
-                        </Grid>
+                                ))}
+                            </Box>
+                        </Paper>
                     ))}
-                </Grid>
+                </Stack>
+
+                {/* Additional Info */}
+                <Box
+                    sx={{
+                        mt: 6,
+                        textAlign: 'center',
+                        animation: `${fadeInUp} 0.8s ease-out 0.6s both`,
+                    }}
+                >
+                    <Typography
+                        variant="body2"
+                        sx={{
+                            color: darkMode
+                                ? 'rgba(255, 255, 255, 0.5)'
+                                : 'rgba(0, 0, 0, 0.5)',
+                            fontSize: '0.95rem',
+                        }}
+                    >
+                        💡 Always learning and exploring new technologies
+                    </Typography>
+                </Box>
             </Container>
         </Box>
     );

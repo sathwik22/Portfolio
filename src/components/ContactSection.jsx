@@ -70,7 +70,6 @@ const ContactSection = ({ darkMode, theme }) => {
                                 sx={{
                                     display: 'flex',
                                     justifyContent: 'center',
-                                    mb: 4,
                                     gap: 2,
                                 }}
                             >
