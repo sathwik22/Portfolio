@@ -5,23 +5,21 @@ export const getTheme = (darkMode) => {
         palette: {
             mode: darkMode ? 'dark' : 'light',
             primary: {
-                main: darkMode ? '#8B5CF6' : '#7C3AED',
-                light: darkMode ? '#A78BFA' : '#A78BFA',
-                dark: darkMode ? '#6D28D9' : '#5B21B6',
+                main: darkMode ? '#6366F1' : '#4F46E5',
+                light: darkMode ? '#818CF8' : '#818CF8',
+                dark: darkMode ? '#4338CA' : '#3730A3',
             },
             secondary: {
-                main: darkMode ? '#06B6D4' : '#0891B2',
-                light: darkMode ? '#22D3EE' : '#22D3EE',
+                main: darkMode ? '#64748B' : '#475569',
+                light: darkMode ? '#94A3B8' : '#94A3B8',
             },
             background: {
                 default: darkMode ? '#0F172A' : '#F8FAFC',
                 paper: darkMode ? '#1E293B' : '#FFFFFF',
             },
             accent: {
-                pink: '#EC4899',
-                blue: '#3B82F6',
-                purple: '#8B5CF6',
-                cyan: '#06B6D4',
+                indigo: '#6366F1',
+                slate: '#64748B',
             },
         },
         typography: {

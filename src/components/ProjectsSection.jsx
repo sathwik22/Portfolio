@@ -26,12 +26,7 @@ const ProjectsSection = ({ darkMode, theme }) => {
                             mb: 2,
                             fontSize: { xs: '2rem', md: '3rem' },
                             fontWeight: 800,
-                            background: darkMode
-                                ? 'linear-gradient(135deg, #FFFFFF 0%, #8B5CF6 100%)'
-                                : 'linear-gradient(135deg, #1E293B 0%, #7C3AED 100%)',
-                            backgroundClip: 'text',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
+                            color: darkMode ? '#FFFFFF' : '#1E293B',
                         }}
                     >
                         Featured Projects

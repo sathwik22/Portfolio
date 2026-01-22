@@ -16,24 +16,20 @@ const fadeInUp = keyframes`
 const SkillsSection = ({ darkMode, theme }) => {
     const skillCategories = [
         {
-            title: '⚡ Core Technologies',
+            title: 'Core Technologies',
             skills: ['React', 'TypeScript', 'JavaScript', 'HTML', 'CSS'],
-            gradient: 'linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)',
         },
         {
-            title: '🎨 Frameworks & Libraries',
+            title: 'Frameworks & Libraries',
             skills: ['Material-UI', 'Sass', 'React-Admin', 'Redux'],
-            gradient: 'linear-gradient(135deg, #06B6D4 0%, #3B82F6 100%)',
         },
         {
-            title: '🛠️ Tools & Platforms',
+            title: 'Tools & Platforms',
             skills: ['GitHub Copilot', 'Jest', 'Cypress', 'Postman', 'Linux'],
-            gradient: 'linear-gradient(135deg, #EC4899 0%, #F59E0B 100%)',
         },
         {
-            title: '📚 Also Familiar With',
+            title: 'Also Familiar With',
             skills: ['Python', 'SQL', 'LaTeX', 'Solid Edge'],
-            gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
         },
     ];
 
@@ -72,12 +68,7 @@ const SkillsSection = ({ darkMode, theme }) => {
                             mb: 2,
                             fontSize: { xs: '2rem', md: '3rem' },
                             fontWeight: 800,
-                            background: darkMode
-                                ? 'linear-gradient(135deg, #FFFFFF 0%, #8B5CF6 100%)'
-                                : 'linear-gradient(135deg, #1E293B 0%, #7C3AED 100%)',
-                            backgroundClip: 'text',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
+                            color: darkMode ? '#FFFFFF' : '#1E293B',
                         }}
                     >
                         Skills & Technologies
@@ -113,8 +104,8 @@ const SkillsSection = ({ darkMode, theme }) => {
                                 backdropFilter: 'blur(10px)',
                                 border: `1px solid ${
                                     darkMode
-                                        ? 'rgba(139, 92, 246, 0.2)'
-                                        : 'rgba(124, 58, 237, 0.1)'
+                                        ? 'rgba(99, 102, 241, 0.2)'
+                                        : 'rgba(79, 70, 229, 0.1)'
                                 }`,
                                 transition:
                                     'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -124,12 +115,12 @@ const SkillsSection = ({ darkMode, theme }) => {
                                 '&:hover': {
                                     transform: 'translateY(-8px)',
                                     boxShadow: darkMode
-                                        ? '0 20px 40px rgba(139, 92, 246, 0.2)'
-                                        : '0 20px 40px rgba(124, 58, 237, 0.15)',
+                                        ? '0 20px 40px rgba(99, 102, 241, 0.15)'
+                                        : '0 20px 40px rgba(79, 70, 229, 0.1)',
                                     border: `1px solid ${
                                         darkMode
-                                            ? 'rgba(139, 92, 246, 0.4)'
-                                            : 'rgba(124, 58, 237, 0.2)'
+                                            ? 'rgba(99, 102, 241, 0.4)'
+                                            : 'rgba(79, 70, 229, 0.2)'
                                     }`,
                                 },
                             }}
@@ -141,10 +132,7 @@ const SkillsSection = ({ darkMode, theme }) => {
                                     mb: 3,
                                     fontWeight: 700,
                                     fontSize: '1.25rem',
-                                    background: category.gradient,
-                                    backgroundClip: 'text',
-                                    WebkitBackgroundClip: 'text',
-                                    WebkitTextFillColor: 'transparent',
+                                    color: theme.palette.primary.main,
                                 }}
                             >
                                 {category.title}

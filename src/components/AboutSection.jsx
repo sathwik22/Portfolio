@@ -72,12 +72,7 @@ const AboutSection = ({ darkMode, theme }) => {
                             mb: 2,
                             fontSize: { xs: '2rem', md: '3rem' },
                             fontWeight: 800,
-                            background: darkMode
-                                ? 'linear-gradient(135deg, #FFFFFF 0%, #8B5CF6 100%)'
-                                : 'linear-gradient(135deg, #1E293B 0%, #7C3AED 100%)',
-                            backgroundClip: 'text',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
+                            color: darkMode ? '#FFFFFF' : '#1E293B',
                         }}
                     >
                         Professional Journey
@@ -111,8 +106,8 @@ const AboutSection = ({ darkMode, theme }) => {
                                 backdropFilter: 'blur(10px)',
                                 border: `1px solid ${
                                     darkMode
-                                        ? 'rgba(139, 92, 246, 0.2)'
-                                        : 'rgba(124, 58, 237, 0.1)'
+                                        ? 'rgba(99, 102, 241, 0.2)'
+                                        : 'rgba(79, 70, 229, 0.1)'
                                 }`,
                                 textAlign: 'center',
                                 position: 'sticky',
@@ -265,9 +260,6 @@ const AboutSection = ({ darkMode, theme }) => {
                                 sx={{
                                     py: 1.5,
                                     fontWeight: 700,
-                                    background: darkMode
-                                        ? 'linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)'
-                                        : 'linear-gradient(135deg, #7C3AED 0%, #EC4899 100%)',
                                 }}
                             >
                                 Download Resume
@@ -297,8 +289,8 @@ const AboutSection = ({ darkMode, theme }) => {
                                 backdropFilter: 'blur(10px)',
                                 border: `1px solid ${
                                     darkMode
-                                        ? 'rgba(139, 92, 246, 0.2)'
-                                        : 'rgba(124, 58, 237, 0.1)'
+                                        ? 'rgba(99, 102, 241, 0.2)'
+                                        : 'rgba(79, 70, 229, 0.1)'
                                 }`,
                             }}
                         >
@@ -307,6 +299,7 @@ const AboutSection = ({ darkMode, theme }) => {
                                 sx={{
                                     fontSize: '1.1rem',
                                     lineHeight: 1.8,
+                                    mb: 3,
                                     color: darkMode
                                         ? 'rgba(255, 255, 255, 0.9)'
                                         : 'rgba(0, 0, 0, 0.8)',
@@ -314,6 +307,20 @@ const AboutSection = ({ darkMode, theme }) => {
                             >
                                 {aboutDescription}
                             </Typography>
+                            <Button
+                                variant="outlined"
+                                startIcon={<CodeIcon />}
+                                onClick={handleDownloadResume}
+                                sx={{
+                                    fontWeight: 600,
+                                    borderWidth: 2,
+                                    '&:hover': {
+                                        borderWidth: 2,
+                                    },
+                                }}
+                            >
+                                Download Resume
+                            </Button>
                         </Paper>
 
                         {/* Experience Timeline */}
@@ -331,16 +338,16 @@ const AboutSection = ({ darkMode, theme }) => {
                                     backdropFilter: 'blur(10px)',
                                     border: `1px solid ${
                                         darkMode
-                                            ? 'rgba(139, 92, 246, 0.2)'
-                                            : 'rgba(124, 58, 237, 0.1)'
+                                            ? 'rgba(99, 102, 241, 0.2)'
+                                            : 'rgba(79, 70, 229, 0.1)'
                                     }`,
                                     transition: 'all 0.3s ease',
                                     '&:hover': {
                                         transform: 'translateX(8px)',
                                         border: `1px solid ${
                                             darkMode
-                                                ? 'rgba(139, 92, 246, 0.4)'
-                                                : 'rgba(124, 58, 237, 0.2)'
+                                                ? 'rgba(99, 102, 241, 0.4)'
+                                                : 'rgba(79, 70, 229, 0.2)'
                                         }`,
                                     },
                                 }}

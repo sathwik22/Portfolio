@@ -83,13 +83,12 @@ const HeroSection = ({ currentLine, darkMode, scrollToSection, theme }) => {
                                 label="Available for opportunities"
                                 sx={{
                                     background: darkMode
-                                        ? 'linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%)'
-                                        : 'linear-gradient(135deg, rgba(167, 139, 250, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%)',
-                                    backdropFilter: 'blur(10px)',
+                                        ? 'rgba(99, 102, 241, 0.1)'
+                                        : 'rgba(79, 70, 229, 0.08)',
                                     border: `1px solid ${
                                         darkMode
-                                            ? 'rgba(139, 92, 246, 0.3)'
-                                            : 'rgba(124, 58, 237, 0.3)'
+                                            ? 'rgba(99, 102, 241, 0.3)'
+                                            : 'rgba(79, 70, 229, 0.2)'
                                     }`,
                                     color: theme.palette.primary.main,
                                     fontWeight: 600,
@@ -113,17 +112,7 @@ const HeroSection = ({ currentLine, darkMode, scrollToSection, theme }) => {
                                 fontWeight: 800,
                                 lineHeight: 1.1,
                                 mb: 2,
-                                background: darkMode
-                                    ? 'linear-gradient(135deg, #FFFFFF 0%, #A78BFA 50%, #EC4899 100%)'
-                                    : 'linear-gradient(135deg, #1E293B 0%, #7C3AED 50%, #EC4899 100%)',
-                                backgroundSize: '200% 200%',
-                                animation: `${gradientAnimation} 8s ease infinite`,
-                                backgroundClip: 'text',
-                                WebkitBackgroundClip: 'text',
-                                WebkitTextFillColor: 'transparent',
-                                textShadow: darkMode
-                                    ? '0 0 40px rgba(139, 92, 246, 0.3)'
-                                    : 'none',
+                                color: darkMode ? '#FFFFFF' : '#1E293B',
                             }}
                         >
                             {currentLine}
@@ -211,8 +200,8 @@ const HeroSection = ({ currentLine, darkMode, scrollToSection, theme }) => {
                                     fontWeight: 600,
                                     border: `1px solid ${
                                         darkMode
-                                            ? 'rgba(236, 72, 153, 0.2)'
-                                            : 'rgba(236, 72, 153, 0.2)'
+                                            ? 'rgba(99, 102, 241, 0.2)'
+                                            : 'rgba(79, 70, 229, 0.2)'
                                     }`,
                                 }}
                             />
@@ -232,14 +221,6 @@ const HeroSection = ({ currentLine, darkMode, scrollToSection, theme }) => {
                                     py: 1.8,
                                     fontSize: '1.05rem',
                                     fontWeight: 700,
-                                    background: darkMode
-                                        ? 'linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)'
-                                        : 'linear-gradient(135deg, #7C3AED 0%, #EC4899 100%)',
-                                    '&:hover': {
-                                        background: darkMode
-                                            ? 'linear-gradient(135deg, #A78BFA 0%, #F472B6 100%)'
-                                            : 'linear-gradient(135deg, #8B5CF6 0%, #F472B6 100%)',
-                                    },
                                 }}
                             >
                                 View My Work
@@ -261,8 +242,8 @@ const HeroSection = ({ currentLine, darkMode, scrollToSection, theme }) => {
                                         borderColor:
                                             theme.palette.primary.light,
                                         bgcolor: darkMode
-                                            ? 'rgba(139, 92, 246, 0.1)'
-                                            : 'rgba(124, 58, 237, 0.05)',
+                                            ? 'rgba(99, 102, 241, 0.1)'
+                                            : 'rgba(79, 70, 229, 0.05)',
                                     },
                                 }}
                             >
@@ -291,14 +272,10 @@ const HeroSection = ({ currentLine, darkMode, scrollToSection, theme }) => {
                                 sx={{
                                     position: 'absolute',
                                     inset: -20,
-                                    background: darkMode
-                                        ? 'linear-gradient(135deg, #8B5CF6, #EC4899, #06B6D4)'
-                                        : 'linear-gradient(135deg, #A78BFA, #F472B6, #22D3EE)',
+                                    background: theme.palette.primary.main,
                                     borderRadius: '50%',
                                     filter: 'blur(40px)',
-                                    opacity: 0.6,
-                                    animation: `${gradientAnimation} 8s ease infinite`,
-                                    backgroundSize: '200% 200%',
+                                    opacity: darkMode ? 0.4 : 0.25,
                                 }}
                             />
 
@@ -311,12 +288,12 @@ const HeroSection = ({ currentLine, darkMode, scrollToSection, theme }) => {
                                     height: { xs: 280, sm: 320, md: 360 },
                                     border: `4px solid ${
                                         darkMode
-                                            ? 'rgba(139, 92, 246, 0.3)'
-                                            : 'rgba(124, 58, 237, 0.3)'
+                                            ? 'rgba(99, 102, 241, 0.3)'
+                                            : 'rgba(79, 70, 229, 0.3)'
                                     }`,
                                     boxShadow: darkMode
-                                        ? '0 20px 60px rgba(139, 92, 246, 0.4)'
-                                        : '0 20px 60px rgba(124, 58, 237, 0.3)',
+                                        ? '0 20px 60px rgba(99, 102, 241, 0.3)'
+                                        : '0 20px 60px rgba(79, 70, 229, 0.2)',
                                     position: 'relative',
                                 }}
                             />
