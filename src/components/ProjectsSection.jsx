@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Grid, Typography, Divider } from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import ProjectCard from './ProjectCard';
 import { projectData } from '../utils/constants';
 
