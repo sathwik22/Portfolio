@@ -33,15 +33,6 @@ const float = keyframes`
   }
 `;
 
-const gradientAnimation = keyframes`
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-`;
-
 const HeroSection = ({ currentLine, darkMode, scrollToSection, theme }) => {
     return (
         <Box
@@ -125,9 +116,7 @@ const HeroSection = ({ currentLine, darkMode, scrollToSection, theme }) => {
                                 fontSize: { xs: '1.25rem', md: '1.75rem' },
                                 mb: 3,
                                 fontWeight: 600,
-                                color: darkMode
-                                    ? 'rgba(255, 255, 255, 0.8)'
-                                    : 'rgba(0, 0, 0, 0.7)',
+                                color: theme.palette.primary.main,
                             }}
                         >
                             Frontend Developer & GenAI Enthusiast
@@ -162,14 +151,14 @@ const HeroSection = ({ currentLine, darkMode, scrollToSection, theme }) => {
                                 size="medium"
                                 sx={{
                                     bgcolor: darkMode
-                                        ? 'rgba(139, 92, 246, 0.1)'
-                                        : 'rgba(124, 58, 237, 0.1)',
+                                        ? 'rgba(99, 102, 241, 0.1)'
+                                        : 'rgba(79, 70, 229, 0.08)',
                                     color: theme.palette.primary.main,
                                     fontWeight: 600,
                                     border: `1px solid ${
                                         darkMode
-                                            ? 'rgba(139, 92, 246, 0.2)'
-                                            : 'rgba(124, 58, 237, 0.2)'
+                                            ? 'rgba(99, 102, 241, 0.3)'
+                                            : 'rgba(79, 70, 229, 0.2)'
                                     }`,
                                 }}
                             />
@@ -178,14 +167,14 @@ const HeroSection = ({ currentLine, darkMode, scrollToSection, theme }) => {
                                 size="medium"
                                 sx={{
                                     bgcolor: darkMode
-                                        ? 'rgba(6, 182, 212, 0.1)'
-                                        : 'rgba(8, 145, 178, 0.1)',
-                                    color: theme.palette.secondary.main,
+                                        ? 'rgba(100, 116, 139, 0.15)'
+                                        : 'rgba(71, 85, 105, 0.08)',
+                                    color: darkMode ? '#94A3B8' : '#475569',
                                     fontWeight: 600,
                                     border: `1px solid ${
                                         darkMode
-                                            ? 'rgba(6, 182, 212, 0.2)'
-                                            : 'rgba(8, 145, 178, 0.2)'
+                                            ? 'rgba(100, 116, 139, 0.3)'
+                                            : 'rgba(71, 85, 105, 0.2)'
                                     }`,
                                 }}
                             />
@@ -194,13 +183,13 @@ const HeroSection = ({ currentLine, darkMode, scrollToSection, theme }) => {
                                 size="medium"
                                 sx={{
                                     bgcolor: darkMode
-                                        ? 'rgba(236, 72, 153, 0.1)'
-                                        : 'rgba(236, 72, 153, 0.1)',
-                                    color: '#EC4899',
+                                        ? 'rgba(99, 102, 241, 0.1)'
+                                        : 'rgba(79, 70, 229, 0.08)',
+                                    color: theme.palette.primary.main,
                                     fontWeight: 600,
                                     border: `1px solid ${
                                         darkMode
-                                            ? 'rgba(99, 102, 241, 0.2)'
+                                            ? 'rgba(99, 102, 241, 0.3)'
                                             : 'rgba(79, 70, 229, 0.2)'
                                     }`,
                                 }}
