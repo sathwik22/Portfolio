@@ -26,7 +26,10 @@ export const heroLines = [
     'AI-Powered Development.',
 ];
 
-export const aboutDescription = `Frontend engineer with nearly 3 years building enterprise React applications at Bosch, specializing in performance optimization, scalable state management, and test automation. Selected as core member of the Generative AI Task Force, I've delivered 5 production-ready AI prototypes while leading testing standardization across teams.`;
+export const aboutDescription = `Frontend Engineer with 3 years of experience building and scaling high-performance React applications for
+large-scale, multi-brand platforms.Strong in performance optimization, test automation, and scalable state
+architecture using Redux Toolkit.Known for end-to-end debugging—tracing production issues from Azure App
+Insights through backend services to frontend code, and delivering validated fixes across the full stack.`;
 
 export const experienceItems = [
     {

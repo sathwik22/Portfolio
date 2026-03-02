@@ -307,20 +307,6 @@ const AboutSection = ({ darkMode, theme }) => {
                             >
                                 {aboutDescription}
                             </Typography>
-                            <Button
-                                variant="outlined"
-                                startIcon={<CodeIcon />}
-                                onClick={handleDownloadResume}
-                                sx={{
-                                    fontWeight: 600,
-                                    borderWidth: 2,
-                                    '&:hover': {
-                                        borderWidth: 2,
-                                    },
-                                }}
-                            >
-                                Download Resume
-                            </Button>
                         </Paper>
 
                         {/* Experience Timeline */}

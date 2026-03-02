@@ -25,11 +25,18 @@ const SkillsSection = ({ darkMode, theme }) => {
         },
         {
             title: 'Tools & Platforms',
-            skills: ['GitHub Copilot', 'Jest', 'Cypress', 'Postman', 'Linux'],
+            skills: [
+                'GitHub Copilot',
+                'Jest',
+                'Cypress',
+                'Postman',
+                'Linux',
+                'Azure App Insights',
+            ],
         },
         {
             title: 'Also Familiar With',
-            skills: ['Python', 'SQL', 'LaTeX', 'Solid Edge'],
+            skills: ['Python', 'SQL', 'LaTeX', 'Solid Edge', '.Net'],
         },
     ];
 
