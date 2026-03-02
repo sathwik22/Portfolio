@@ -11,7 +11,7 @@ import { getTheme, getBackgroundStyle } from './utils/theme';
 import { heroLines } from './utils/constants';
 
 function Portfolio() {
-    const [darkMode, setDarkMode] = useState(true);
+    const [darkMode, setDarkMode] = useState(false);
     const [currentLineIndex, setCurrentLineIndex] = useState(0);
     const [activeSection, setActiveSection] = useState('home');
     const [snackbar, setSnackbar] = useState({
