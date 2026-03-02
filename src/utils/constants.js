@@ -9,7 +9,7 @@ export const personalInfo = {
         'Frontend engineer with nearly 3 years building enterprise React apps at Bosch',
     college: 'Indian Institute of Technology, Hyderabad',
     degree: 'B.Tech in Computer Science and Engineering',
-    cgpa: '8.17/10.0',
+    cgpa: '8.21/10.0',
     graduationYear: '2023',
     experienceSince: 'August 2023',
     location: 'Bangalore, India',
